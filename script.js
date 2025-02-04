@@ -10,29 +10,41 @@ document.querySelectorAll('.service-card').forEach(card => {
     });
 });
 
-// Validation améliorée
+// Gestion de la soumission du formulaire
 document.getElementById('couponForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     
     // Ajouter une animation de chargement
     const submitBtn = document.querySelector('.btn-primary');
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Traitement...';
-    
-    // Simulation de traitement
+    submitBtn.disabled = true;
+
+    // Simulation de traitement (à remplacer par un envoi réel)
     await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    // Afficher la confirmation
-    showConfirmation();
+
+    // Masquer les éléments inutiles
+    document.querySelector('.card-grid').style.display = 'none';
+    document.querySelector('.premium-form').style.display = 'none';
+
+    // Afficher la page de confirmation
+    document.querySelector('.confirmation-page').style.display = 'block';
+
+    // Réinitialiser le formulaire
+    e.target.reset();
+    submitBtn.innerHTML = 'Valider';
+    submitBtn.disabled = false;
 });
 
-function showConfirmation() {
-    const confirmation = document.createElement('div');
-    confirmation.className = 'confirmation-banner';
-    confirmation.innerHTML = `
-        <i class="fas fa-check-circle"></i>
-        <span>Coupon activé avec succès !</span>
-    `;
-    document.body.prepend(confirmation);
-    
-    setTimeout(() => confirmation.remove(), 3000);
-}
+// Gestion du compteur de caractères
+document.getElementById('couponCode').addEventListener('input', function() {
+    const charCount = document.getElementById('charCount');
+    const remaining = 12 - this.value.length;
+    charCount.textContent = `${remaining} caractères restants`;
+    charCount.style.color = remaining < 0 ? 'red' : 'inherit';
+});
+
+// Gestion du bouton "Nouvelle demande"
+document.querySelector('.confirmation-page .btn-primary').addEventListener('click', function() {
+    // Recharger la page pour revenir à l'état initial
+    window.location.reload();
+});
