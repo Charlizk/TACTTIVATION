@@ -252,6 +252,7 @@ main.container {
     height: 100%;
     z-index: 10000;
     overflow-y: auto;
+    display: none;
 }
 
 .confirmation-content {
@@ -462,6 +463,15 @@ main.container {
 
     .confirmation-content {
         padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .confirmation-icon {
+        font-size: 3rem;
+    }
+
+    .confirmation-text {
+        font-size: 0.9rem;
     }
 }
 
