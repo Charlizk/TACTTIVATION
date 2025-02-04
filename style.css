@@ -1,0 +1,178 @@
+:root {
+    --primary: #2A2D88;
+    --secondary: #FF6B35;
+    --dark: #1A1D3D;
+    --light: #F8F9FF;
+}
+
+/* Reset modernisé */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* Header premium */
+.modern-header {
+    background: linear-gradient(135deg, var(--dark), var(--primary));
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand-logo {
+    height: 40px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-item.active {
+    color: var(--secondary);
+    transform: scale(1.05);
+}
+
+/* Grille de services */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.service-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.service-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+/* Formulaire premium */
+.premium-form {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-header h2 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+/* Champs de formulaire modernes */
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+/* Bouton moderne */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(42,45,136,0.3);
+}
+
+/* Garanties */
+.guarantees {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 3rem 2rem;
+    background: var(--light);
+}
+
+.guarantee-card {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.guarantee-card i {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}

