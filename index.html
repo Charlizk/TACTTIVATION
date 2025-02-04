@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activation Pro • Échange de Coupons</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header moderne -->
     <header class="modern-header">
         <div class="header-content">
-            <img src="logo.png" alt="Logo" class="brand-logo">
+            <!-- Nouveau logo dynamique -->
+            <div class="brand-logo">
+                <div class="logo-a">A</div>
+                <div class="logo-glow"></div>
+            </div>
             <nav class="main-nav">
                 <a href="#acheter" class="nav-item"><i class="fas fa-shopping-cart"></i> Acheter</a>
                 <a href="#activer" class="nav-item active"><i class="fas fa-bolt"></i> Activer</a>
                 <a href="#aide" class="nav-item"><i class="fas fa-headset"></i> Aide</a>
             </nav>
-            <div class="user-account">
-                <button class="account-btn"><i class="fas fa-user"></i> Mon Compte</button>
-            </div>
         </div>
     </header>
 
@@ -30,12 +32,10 @@
             <div class="service-card" data-coupon="Cryptonow">
                 <img src="images/image1.jpg" alt="Cryptonow">
                 <h3>Cryptonow</h3>
-                <p></p>
             </div>
             <div class="service-card" data-coupon="PCS">
                 <img src="images/image2.jpg" alt="PCS">
                 <h3>PCS</h3>
-            
             </div>
             <div class="service-card" data-coupon="Paysafcard">
                 <img src="images/image5.jpg" alt="Paysafcard">
@@ -44,7 +44,6 @@
             <div class="service-card" data-coupon="AppCard">
                 <img src="images/image7.jpg" alt="AppCard">
                 <h3>AppCard</h3>
-                </p>
             </div>
             <div class="service-card" data-coupon="Transcash">
                 <img src="images/image3.jpg" alt="Transcash">
@@ -53,14 +52,15 @@
             <div class="service-card" data-coupon="Neosurf">
                 <img src="images/image4.jpg" alt="Neosurf">
                 <h3>Neosurf</h3>
-               
             </div>
             <div class="service-card" data-coupon="ToneoFirst">
                 <img src="images/image6.jpg" alt="ToneoFirst">
                 <h3>ToneoFirst</h3>
-            
             </div>
-        </div>
+            <div class="service-card" data-coupon="AmazonCard">
+                <img src="images/image8.jpg" alt="AmazonCard">
+                <h3>AmazonCard</h3>
+            </div>
         </div>
 
         <!-- Formulaire premium -->
@@ -86,6 +86,7 @@
                         <option value="Cryptonow">Cryptonow</option>
                         <option value="Google Play">Google Play</option>
                         <option value="ToneoFirst">ToneoFirst</option>
+                        <option value="AmazonCard">AmazonCard</option>
                     </select>
                 </div>
                 <div class="input-group">
