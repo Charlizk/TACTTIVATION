@@ -372,6 +372,7 @@ main.container {
     box-shadow: 0 4px 12px rgba(74, 144, 226, 0.4);
 }
 
+/* Optimisation mobile */
 @media (max-width: 768px) {
     .copyright-content {
         flex-direction: column;
@@ -385,46 +386,24 @@ main.container {
     }
 }
 
-@media (max-width: 390px) {
-    .header-content {
-        padding: 0 1rem;
-    }
-    
-    .main-nav {
-        gap: 1rem;
-    }
-    
+/* Affichage 2 cartes par ligne sur iPhone 12 mini, 12 Pro, 12 Pro Max */
+@media (max-width: 428px) {
     .card-grid {
-        grid-template-columns: repeat(2, minmax(140px, 160px));
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
         justify-content: center;
         gap: 1rem;
         padding: 1rem;
     }
-    
+
     .service-card {
         padding: 1rem;
         margin: 0 auto;
         max-width: 160px;
     }
-    
+
     .service-card img {
         height: 80px;
         margin-bottom: 0.5rem;
-    }
-    
-    .form-steps {
-        flex-wrap: wrap;
-        gap: 0.8rem;
-    }
-    
-    .premium-form {
-        margin: 1rem;
-        padding: 1.5rem;
-    }
-    
-    .guarantees {
-        grid-template-columns: 1fr;
-        padding: 2rem 1rem;
     }
 }
 
