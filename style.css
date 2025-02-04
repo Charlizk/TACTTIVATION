@@ -17,6 +17,13 @@ body {
     background: var(--light);
     color: var(--dark);
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main.container {
+    flex: 1;
 }
 
 /* Header premium */
@@ -35,6 +42,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 1rem;
 }
 
 .brand-logo {
@@ -110,6 +118,34 @@ body {
 .form-header h2 {
     color: var(--primary);
     margin-bottom: 0.5rem;
+}
+
+/* Étapes du formulaire */
+.form-steps {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    padding: 0 1rem;
+}
+
+.step {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.step.active {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.1);
 }
 
 /* Champs de formulaire modernes */
@@ -308,6 +344,7 @@ body {
     box-shadow: 0 4px 12px rgba(74, 144, 226, 0.4);
 }
 
+/* Optimisation mobile */
 @media (max-width: 768px) {
     .copyright-content {
         flex-direction: column;
@@ -318,5 +355,61 @@ body {
     .legal-mentions {
         display: block;
         margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 390px) {
+    .header-content {
+        padding: 0 1rem;
+    }
+    
+    .main-nav {
+        gap: 1rem;
+    }
+    
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(140px, 160px));
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .service-card {
+        padding: 1rem;
+        margin: 0 auto;
+        max-width: 160px;
+    }
+    
+    .service-card img {
+        height: 80px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .form-steps {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+    
+    .premium-form {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .guarantees {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+}
+
+/* Amélioration de la hauteur sur mobile */
+@media (max-height: 844px) {
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    main.container {
+        flex: 1;
     }
 }
